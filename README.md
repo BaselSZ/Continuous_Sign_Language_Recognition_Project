@@ -1,4 +1,4 @@
-# Continuous Sign Language Recognition (ICS471)
+# Continuous Sign Language Recognition (ICS 471)
 
 A deep learning project that recognizes continuous sign language sequences using human pose keypoints from the Isharah dataset.
 
