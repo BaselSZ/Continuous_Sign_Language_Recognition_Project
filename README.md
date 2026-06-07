@@ -1,40 +1,47 @@
-***Continuous Sign Language Recognition using Deep Learning***
-Overview
+# Continuous Sign Language Recognition (CSLR)
 
-This project implements and compares two Continuous Sign Language Recognition (CSLR) models on the Isharah dataset using pose keypoints extracted from videos.
+A deep learning project that recognizes continuous sign language sequences using human pose keypoints from the Isharah dataset.
 
-Dataset
-9,500 training samples
-949 development samples
-684 gloss vocabulary
-Input shape: (T, 86, 2) pose keypoints
-Models
-1. BiGRU + CTC (Baseline)
-3-layer Bidirectional GRU
-Hidden size: 512
-CTC Loss for sequence alignment
+## Dataset
 
-Result: Dev WER = 0.9014
+* **Training Samples:** 9,500
+* **Development Samples:** 949
+* **Vocabulary Size:** 684 glosses
+* **Input:** Pose keypoints `(T, 86, 2)`
 
-2. Transformer + CTC
-6 Transformer encoder layers
-Hidden size: 384
-6 attention heads
-Sinusoidal positional encoding
-CTC Loss for alignment
+## Models
 
-Result: Dev WER = 0.4473
+### BiGRU + CTC
 
-Results
-Model	Dev WER
-BiGRU + CTC	0.9014
-Transformer + CTC	0.4473
+* 3-layer Bidirectional GRU
+* Hidden Size: 512
+* CTC Loss
 
-The Transformer achieved approximately 50% lower WER than the BiGRU baseline, demonstrating the effectiveness of self-attention for modeling long-range temporal dependencies in sign language sequences.
+**Dev WER:** `0.9014`
 
-Technologies
-Python
-PyTorch
-NumPy
-Pandas
-CUDA
+### Transformer + CTC
+
+* 6 Transformer Encoder Layers
+* 6 Attention Heads
+* Hidden Size: 384
+* Positional Encoding
+* CTC Loss
+
+**Dev WER:** `0.4473`
+
+## Results
+
+| Model             |    Dev WER |
+| ----------------- | ---------: |
+| BiGRU + CTC       |     0.9014 |
+| Transformer + CTC | **0.4473** |
+
+The Transformer model achieved a **50% reduction in Word Error Rate (WER)** compared to the BiGRU baseline, demonstrating superior performance for long-range temporal modeling in sign language recognition.
+
+## Tech Stack
+
+* Python
+* PyTorch
+* NumPy
+* Pandas
+* CUDA
