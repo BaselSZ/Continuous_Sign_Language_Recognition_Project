@@ -1,4 +1,4 @@
-Continuous Sign Language Recognition using Deep Learning
+***Continuous Sign Language Recognition using Deep Learning***
 Overview
 
 This project implements and compares two Continuous Sign Language Recognition (CSLR) models on the Isharah dataset using pose keypoints extracted from videos.
